@@ -1,0 +1,16 @@
+{
+    "name": "terraform-provider-yandex-kind",
+	"build": {
+		"context": "..",
+		"dockerfile": "Containerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {},
+			"extensions": [
+                "golang.go"
+			]
+		}
+	},
+	"remoteUser": "vscode"
+}

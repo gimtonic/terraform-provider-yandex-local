@@ -10,35 +10,29 @@ permissions:
 
 jobs:
   goreleaser:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      -
-        name: Checkout
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      -
-        name: Fetch --prune
+      - name: Fetch --prune
         run: git fetch --prune
-      -
-        name: Set up Go
+      - name: Set up Go
         uses: actions/setup-go@v4
         with:
           go-version: 1.21
-      -
-        name: Import GPG key
+      - name: Import GPG key
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v6
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
-      -
-        name: Run GoReleaser
-        uses: goreleaser/goreleaser-action@v5
+      - name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@v6
         with:
-          # either 'goreleaser' (default) or 'goreleaser-pro'
           distribution: goreleaser
-          version: '~> v1'
+          version: '~> v2'
           args: release --clean
         env:
           GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}

@@ -1,14 +1,14 @@
 terraform {
+  required_version = ">= 0.13"
   required_providers {
     kind = {
-      source  = "tehcyx/kind"
-      version = "~> 0.0.19"
+      source  = "gimtonic/yandex-kind"
+     # version = "~> 0.0.19"
     }
   }
 }
 
-provider "kind" {
-}
+provider "kind" {}
 
 resource "kind_cluster" "default" {
   name = "new-cluster"

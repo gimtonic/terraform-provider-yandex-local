@@ -1,0 +1,9 @@
+FROM golang:1.21
+
+ENV DOCKER_BUILDKIT=1
+
+RUN adduser --disabled-password vscode
+
+USER vscode
+
+WORKDIR /app
