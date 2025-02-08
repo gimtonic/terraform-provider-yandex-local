@@ -55,5 +55,5 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-# archive
 archive/
+.gitlab.env
