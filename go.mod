@@ -1,6 +1,7 @@
 module github.com/tehcyx/terraform-provider-kind
 
 go 1.21
+
 toolchain go1.22.5
 
 require (
