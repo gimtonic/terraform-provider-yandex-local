@@ -20,6 +20,7 @@
 			]
 		}
 	},
+	"onCreateCommand": "bash .devcontainer/onCreateCommand.bash",
 	"postCreateCommand": "echo \"source /usr/share/bash-completion/completions/git\" >> ~/.bashrc",
 	"remoteUser": "vscode"
 }
