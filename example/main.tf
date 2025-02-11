@@ -1,9 +1,8 @@
 terraform {
-  required_version = ">= 0.13"
   required_providers {
     kind = {
       source  = "gimtonic/yandex-kind"
-     # version = "~> 0.0.19"
+      # version = "~> 0.0.4"
     }
   }
 }

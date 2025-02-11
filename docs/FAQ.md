@@ -1,3 +1,0 @@
-# Frequently Asked Questions
-
-Add questions as they arise...
