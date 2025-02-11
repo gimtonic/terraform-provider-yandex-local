@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/gimtonic/terraform-provider-yandex-local/kind"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
-	"github.com/tehcyx/terraform-provider-kind/kind"
 )
 
 func main() {

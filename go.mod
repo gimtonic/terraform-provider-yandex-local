@@ -1,4 +1,4 @@
-module github.com/tehcyx/terraform-provider-kind
+module github.com/gimtonic/terraform-provider-yandex-local
 
 go 1.22.0
 
